@@ -319,30 +319,32 @@ MapR credentials of user 'root' for cluster '8vm1.example.com' are written to '/
 [root@8vm1 ~]#
 ```
 ###### Oneline commands
-- top20containers=Gets top 20 containers from mrconfig info dumpcontainers output
+- top20containers=Gets top 20 containers from mrconfig info dumpcontainers output and sort based on logical size
 ###### Example:-
 ```sh
 [mapr@8vm1]$ top20containers
-Time: 2020-10-06 11:44:28,9148
-cid:65 volid:0 sp:SP1:/dev/sdb issnap:0 logical:129
-cid:2200 volid:114024903 sp:SP1:/dev/sdb issnap:0 logical:570
-cid:2199 volid:114024903 sp:SP1:/dev/sdb issnap:0 logical:438
-cid:2198 volid:114024903 sp:SP1:/dev/sdb issnap:0 logical:647
-cid:2197 volid:114024903 sp:SP1:/dev/sdb issnap:0 logical:765
-cid:2196 volid:114024903 sp:SP1:/dev/sdb issnap:0 logical:471
-cid:2195 volid:64697385 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2194 volid:64697385 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2193 volid:64697385 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2192 volid:64697385 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2191 volid:64697385 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2190 volid:68844869 sp:SP1:/dev/sdb issnap:0 logical:8
-cid:2189 volid:68844869 sp:SP1:/dev/sdb issnap:0 logical:8
-cid:2188 volid:68844869 sp:SP1:/dev/sdb issnap:0 logical:8
-cid:2187 volid:68844869 sp:SP1:/dev/sdb issnap:0 logical:12
-cid:2186 volid:68844869 sp:SP1:/dev/sdb issnap:0 logical:11
-cid:2185 volid:30391668 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2184 volid:30391668 sp:SP1:/dev/sdb issnap:0 logical:9
-cid:2183 volid:30391668 sp:SP1:/dev/sdb issnap:0 logical:93
+[mapr@8vm1 ~]$ top20containers
+cid:2181:volid:30391668:sp:SP1:/dev/sdb:issnap:0:logical:4791
+cid:2181:volid:30391668:sp:SP1:/dev/sdb:issnap:0:logical:4791
+cid:2116:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:2718
+cid:2116:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:2718
+cid:2197:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:820
+cid:2197:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:820
+cid:2200:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:680
+cid:2200:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:680
+cid:2198:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:669
+cid:2198:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:669
+cid:2196:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:523
+cid:2196:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:523
+cid:2199:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:501
+cid:2199:volid:114024903:sp:SP1:/dev/sdb:issnap:0:logical:501
+cid:2117:volid:30391668:sp:SP1:/dev/sdb:issnap:0:logical:254
+cid:2117:volid:30391668:sp:SP1:/dev/sdb:issnap:0:logical:254
+cid:1:volid:1:sp:SP1:/dev/sdb:issnap:0:logical:188
+cid:1:volid:1:sp:SP1:/dev/sdb:issnap:0:logical:188
+cid:2183:volid:30391668:sp:SP1:/dev/sdb:issnap:0:logical:151
+cid:2183:volid:30391668:sp:SP1:/dev/sdb:issnap:0:logical:151
+
 [mapr@8vm1 alias]$
 ```
 - mfstop= Runs top -p "mfspid" -H
