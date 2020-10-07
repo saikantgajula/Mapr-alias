@@ -69,7 +69,7 @@ alias mlogin='maprlogin password'
 
 #Useful oneline scripts/commands.
 
-alias top20containers='$MAPR_HOME/server/mrconfig info dumpcontainers |awk '\''{print $1,$2,$3,$7,$16}'\'' |sort -t: -n -r -k  5 |head  -20'
+alias top20containers='$MAPR_HOME/server/mrconfig info dumpcontainers |awk '\''{print $1,$2,$3,$7,$16}'\''|sed '/SP/p' |tr -s " " ":"|sort -n -r -t: -k 11 |head -20'
 alias volumemounts='maprcli volume list -columns n,mountdir,mounted'
 
 mfstop () {
